@@ -1,0 +1,42 @@
+/* Apply the 'Inter' font family as the default */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Add a subtle texture */
+    background-color: #111827; /* gray-900 */
+    background-image: radial-gradient(#374151 0.5px, transparent 0.5px);
+    background-size: 15px 15px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #1f2937; /* gray-800 */ }
+::-webkit-scrollbar-thumb { background: #0d9488; /* teal-600 */ border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #14b8a6; /* teal-500 */ }
+
+/* Dynamic scrolling marquee for industries */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+.marquee-content span {
+    display: inline-block;
+    padding: 0 1.5rem; /* 0 6 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* medium */
+    color: #ccfbf1; /* teal-100 */
+    background-color: #134e4a; /* teal-900 */
+    border: 1px solid #0d9488; /* teal-600 */
+    border-radius: 9999px; /* rounded-full */
+    margin: 0 0.5rem; /* 0 2 */
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
